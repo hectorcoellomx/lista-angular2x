@@ -1,3 +1,27 @@
-<p>
-  body works!
-</p>
+<div class="container">
+  <div class="row">
+    <div id="arealista" class="col-6">
+
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let fruta of frutas">{{ fruta }}</li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <div class="row">
+          <div class="col-9">
+            <input id="fruta_nueva" [(ngModel)]="fruta_nueva" type="text" class="form-control" id="inputPassword2" placeholder="Fruta" autofocus #firstName>
+          </div>
+          <div class="col-3">
+            <button type="button" class="btn btn-primary mb-2">Agregar</button>
+          </div>
+      </div>
+      <div class="row">
+        <div id="areapredefinido" class="col-12">
+          <strong>Variable Frutas:</strong>
+          <pre id="predefinido">{{ frutas_string }}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
