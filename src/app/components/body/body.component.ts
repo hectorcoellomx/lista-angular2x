@@ -13,4 +13,13 @@ export class BodyComponent {
 
   constructor() { }
 
+  agregar() {
+    if(this.fruta_nueva!=""){
+      this.frutas.push(this.fruta_nueva);
+      this.frutas_string = String(this.frutas);
+      this.fruta_nueva = "";
+    }
+    
+  }
+
 }
