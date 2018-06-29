@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-body',
@@ -11,6 +11,8 @@ export class BodyComponent {
   frutas = ['Uva','Naranja'];
   frutas_string = String(this.frutas);
 
+  @ViewChild('firstName') firstNameElement: ElementRef;
+
   constructor() { }
 
   agregar() {
@@ -18,6 +20,7 @@ export class BodyComponent {
       this.frutas.push(this.fruta_nueva);
       this.frutas_string = String(this.frutas);
       this.fruta_nueva = "";
+      this.firstNameElement.nativeElement.focus();
     }
     
   }
